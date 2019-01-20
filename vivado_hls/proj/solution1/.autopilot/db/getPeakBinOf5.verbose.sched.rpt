@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vivado HLS Report for 'getPeakBinOf5'
+================================================================
+* Date:           Sun Jan 20 19:47:00 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        proj
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx690tffg1927-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.33|     6.123|        1.04|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.12>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%etSum_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %etSum)"   --->   Operation 3 'read' 'etSum_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%et_4_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %et_4_read)"   --->   Operation 4 'read' 'et_4_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%et_3_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %et_3_read)"   --->   Operation 5 'read' 'et_3_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%et_2_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %et_2_read)"   --->   Operation 6 'read' 'et_2_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%et_1_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %et_1_read)"   --->   Operation 7 'read' 'et_1_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%et_0_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %et_0_read)"   --->   Operation 8 'read' 'et_0_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_9 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %et_0_read_1, i32 1, i32 15)" [src/ClusterFinder.cc:1312]   --->   Operation 9 'partselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp_2 = zext i15 %tmp_9 to i16" [src/ClusterFinder.cc:1312]   --->   Operation 10 'zext' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%tmp_s = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %et_1_read_1, i32 1, i32 15)" [src/ClusterFinder.cc:1312]   --->   Operation 11 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_5 = zext i15 %tmp_s to i16" [src/ClusterFinder.cc:1312]   --->   Operation 12 'zext' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_1 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %et_2_read_1, i32 1, i32 15)" [src/ClusterFinder.cc:1312]   --->   Operation 13 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_16 = zext i15 %tmp_1 to i16" [src/ClusterFinder.cc:1312]   --->   Operation 14 'zext' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = shl i16 %et_2_read_1, 1" [src/ClusterFinder.cc:1312]   --->   Operation 15 'shl' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_3 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %et_3_read_1, i32 1, i32 15)" [src/ClusterFinder.cc:1312]   --->   Operation 16 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_17 = zext i15 %tmp_3 to i16" [src/ClusterFinder.cc:1312]   --->   Operation 17 'zext' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_18 = trunc i16 %et_4_read_1 to i14"   --->   Operation 18 'trunc' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_19 = trunc i16 %et_3_read_1 to i14"   --->   Operation 19 'trunc' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.32ns)   --->   "%tmp5 = add i14 %tmp_18, %tmp_19"   --->   Operation 20 'add' 'tmp5' <Predicate = true> <Delay = 1.32> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp1 = call i16 @_ssdm_op_BitConcatenate.i16.i14.i2(i14 %tmp5, i2 0)"   --->   Operation 21 'bitconcatenate' 'tmp1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_4 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %et_4_read_1, i32 1, i32 15)" [src/ClusterFinder.cc:1312]   --->   Operation 22 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_20 = zext i15 %tmp_4 to i16" [src/ClusterFinder.cc:1312]   --->   Operation 23 'zext' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.30ns)   --->   "%tmp8 = add i16 %tmp_2, %et_1_read_1" [src/ClusterFinder.cc:1312]   --->   Operation 24 'add' 'tmp8' <Predicate = true> <Delay = 1.30> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp2 = add i16 %tmp, %tmp_16" [src/ClusterFinder.cc:1312]   --->   Operation 25 'add' 'tmp2' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.02> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 26 [1/1] (2.04ns) (root node of TernaryAdder)   --->   "%tmp9 = add i16 %tmp_5, %tmp2" [src/ClusterFinder.cc:1312]   --->   Operation 26 'add' 'tmp9' <Predicate = true> <Delay = 2.04> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.02> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 27 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_8 = add i16 %tmp8, %tmp9" [src/ClusterFinder.cc:1312]   --->   Operation 27 'add' 'tmp_8' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.02> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 28 [1/1] (2.04ns) (root node of TernaryAdder)   --->   "%tmp_6 = sub i16 %tmp_8, %tmp_17" [src/ClusterFinder.cc:1312]   --->   Operation 28 'sub' 'tmp_6' <Predicate = true> <Delay = 2.04> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.02> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 29 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp3 = add i16 %tmp1, %tmp_20" [src/ClusterFinder.cc:1312]   --->   Operation 29 'add' 'tmp3' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.02> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 30 [1/1] (2.04ns) (root node of TernaryAdder)   --->   "%iEtSum = add i16 %tmp_6, %tmp3" [src/ClusterFinder.cc:1312]   --->   Operation 30 'add' 'iEtSum' <Predicate = true> <Delay = 2.04> <Core = "TAddSub">   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.02> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 3.53>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [src/ClusterFinder.cc:1305]   --->   Operation 31 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (1.18ns)   --->   "%tmp_7 = icmp ugt i16 %iEtSum, %etSum_read" [src/ClusterFinder.cc:1314]   --->   Operation 32 'icmp' 'tmp_7' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.19> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_13_cast1 = zext i16 %iEtSum to i18" [src/ClusterFinder.cc:1315]   --->   Operation 33 'zext' 'tmp_13_cast1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_13_cast = zext i16 %iEtSum to i17" [src/ClusterFinder.cc:1315]   --->   Operation 34 'zext' 'tmp_13_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_14_cast1 = zext i16 %etSum_read to i18" [src/ClusterFinder.cc:1315]   --->   Operation 35 'zext' 'tmp_14_cast1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_10 = call i17 @_ssdm_op_BitConcatenate.i17.i16.i1(i16 %etSum_read, i1 false)" [src/ClusterFinder.cc:1315]   --->   Operation 36 'bitconcatenate' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_15_cast = zext i17 %tmp_10 to i18" [src/ClusterFinder.cc:1315]   --->   Operation 37 'zext' 'tmp_15_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (1.18ns)   --->   "%tmp_11 = icmp ugt i17 %tmp_13_cast, %tmp_10" [src/ClusterFinder.cc:1315]   --->   Operation 38 'icmp' 'tmp_11' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.19> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (1.32ns)   --->   "%tmp_12 = add i18 %tmp_14_cast1, %tmp_15_cast" [src/ClusterFinder.cc:1316]   --->   Operation 39 'add' 'tmp_12' <Predicate = true> <Delay = 1.32> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.32> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (1.19ns)   --->   "%tmp_13 = icmp ugt i18 %tmp_13_cast1, %tmp_12" [src/ClusterFinder.cc:1316]   --->   Operation 40 'icmp' 'tmp_13' <Predicate = true> <Delay = 1.19> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.19> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_14 = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %etSum_read, i2 0)" [src/ClusterFinder.cc:1317]   --->   Operation 41 'bitconcatenate' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (1.19ns)   --->   "%tmp_15 = icmp ugt i18 %tmp_13_cast1, %tmp_14" [src/ClusterFinder.cc:1317]   --->   Operation 42 'icmp' 'tmp_15' <Predicate = true> <Delay = 1.19> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.19> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp4)   --->   "%iAve = select i1 %tmp_15, i3 -4, i3 3" [src/ClusterFinder.cc:1317]   --->   Operation 43 'select' 'iAve' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp4)   --->   "%tmp4 = and i1 %tmp_11, %tmp_13" [src/ClusterFinder.cc:1315]   --->   Operation 44 'and' 'tmp4' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp4)   --->   "%sel_tmp1 = and i1 %tmp4, %tmp_7" [src/ClusterFinder.cc:1315]   --->   Operation 45 'and' 'sel_tmp1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp4)   --->   "%sel_tmp2 = select i1 %sel_tmp1, i3 %iAve, i3 2" [src/ClusterFinder.cc:1315]   --->   Operation 46 'select' 'sel_tmp2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.51ns) (out node of the LUT)   --->   "%sel_tmp4 = select i1 %tmp_7, i3 %sel_tmp2, i3 0" [src/ClusterFinder.cc:1314]   --->   Operation 47 'select' 'sel_tmp4' <Predicate = true> <Delay = 0.51> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 48 [1/1] (0.00ns) (grouped into LUT with out node iAve_3)   --->   "%sel_tmp5 = xor i1 %tmp_11, true" [src/ClusterFinder.cc:1315]   --->   Operation 48 'xor' 'sel_tmp5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node iAve_3)   --->   "%sel_tmp6 = and i1 %tmp_7, %sel_tmp5" [src/ClusterFinder.cc:1314]   --->   Operation 49 'and' 'sel_tmp6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 50 [1/1] (0.51ns) (out node of the LUT)   --->   "%iAve_3 = select i1 %sel_tmp6, i3 1, i3 %sel_tmp4" [src/ClusterFinder.cc:1314]   --->   Operation 50 'select' 'iAve_3' <Predicate = true> <Delay = 0.51> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "ret i3 %iAve_3" [src/ClusterFinder.cc:1319]   --->   Operation 51 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8.33ns, clock uncertainty: 1.04ns.
+
+ <State 1>: 6.12ns
+The critical path consists of the following:
+	wire read on port 'et_2_read' [10]  (0 ns)
+	'shl' operation ('tmp', src/ClusterFinder.cc:1312) [20]  (0 ns)
+	'add' operation ('tmp2', src/ClusterFinder.cc:1312) [30]  (0 ns)
+	'add' operation ('tmp9', src/ClusterFinder.cc:1312) [31]  (2.04 ns)
+	'add' operation ('tmp_8', src/ClusterFinder.cc:1312) [32]  (0 ns)
+	'sub' operation ('tmp_6', src/ClusterFinder.cc:1312) [33]  (2.04 ns)
+	'add' operation ('iEtSum', src/ClusterFinder.cc:1312) [35]  (2.04 ns)
+
+ <State 2>: 3.53ns
+The critical path consists of the following:
+	'add' operation ('tmp_12', src/ClusterFinder.cc:1316) [43]  (1.32 ns)
+	'icmp' operation ('tmp_13', src/ClusterFinder.cc:1316) [44]  (1.19 ns)
+	'and' operation ('tmp4', src/ClusterFinder.cc:1315) [48]  (0 ns)
+	'and' operation ('sel_tmp1', src/ClusterFinder.cc:1315) [49]  (0 ns)
+	'select' operation ('sel_tmp2', src/ClusterFinder.cc:1315) [50]  (0 ns)
+	'select' operation ('sel_tmp4', src/ClusterFinder.cc:1314) [51]  (0.51 ns)
+	'select' operation ('iAve_3', src/ClusterFinder.cc:1314) [54]  (0.51 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,718 @@
+
+
+================================================================
+== Vivado HLS Report for 'getClustersInCard'
+================================================================
+* Date:           Sun Jan 20 19:47:12 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        proj
+* Solution:       solution1
+* Product family: virtex7
+* Target device:  xc7vx690tffg1927-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.33|     6.123|        1.04|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    5|    5|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |                                  |                      |  Latency  |  Interval | Pipeline |
+        |             Instance             |        Module        | min | max | min | max |   Type   |
+        +----------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |grp_getClustersin3x4Regi_fu_2412  |getClustersin3x4Regi  |    4|    4|    1|    1| function |
+        +----------------------------------+----------------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        0|      -|   17292|   17184|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|       -|
+|Register         |        -|      -|    4801|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|   22093|   17184|
++-----------------+---------+-------+--------+--------+
+|Available        |     2940|   3600|  866400|  433200|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|       2|       3|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+----------------------+---------+-------+-------+-------+
+    |             Instance             |        Module        | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +----------------------------------+----------------------+---------+-------+-------+-------+
+    |grp_getClustersin3x4Regi_fu_2412  |getClustersin3x4Regi  |        0|      0|  17292|  17184|
+    +----------------------------------+----------------------+---------+-------+-------+-------+
+    |Total                             |                      |        0|      0|  17292|  17184|
+    +----------------------------------+----------------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +---------------------------+----+----+-----+-----------+
+    |            Name           | FF | LUT| Bits| Const Bits|
+    +---------------------------+----+----+-----+-----------+
+    |ap_ce_reg                  |   1|   0|    1|          0|
+    |crystals_0_read_int_reg    |  16|   0|   16|          0|
+    |crystals_100_read_int_reg  |  16|   0|   16|          0|
+    |crystals_101_read_int_reg  |  16|   0|   16|          0|
+    |crystals_102_read_int_reg  |  16|   0|   16|          0|
+    |crystals_103_read_int_reg  |  16|   0|   16|          0|
+    |crystals_104_read_int_reg  |  16|   0|   16|          0|
+    |crystals_105_read_int_reg  |  16|   0|   16|          0|
+    |crystals_106_read_int_reg  |  16|   0|   16|          0|
+    |crystals_107_read_int_reg  |  16|   0|   16|          0|
+    |crystals_108_read_int_reg  |  16|   0|   16|          0|
+    |crystals_109_read_int_reg  |  16|   0|   16|          0|
+    |crystals_10_read_int_reg   |  16|   0|   16|          0|
+    |crystals_110_read_int_reg  |  16|   0|   16|          0|
+    |crystals_111_read_int_reg  |  16|   0|   16|          0|
+    |crystals_112_read_int_reg  |  16|   0|   16|          0|
+    |crystals_113_read_int_reg  |  16|   0|   16|          0|
+    |crystals_114_read_int_reg  |  16|   0|   16|          0|
+    |crystals_115_read_int_reg  |  16|   0|   16|          0|
+    |crystals_116_read_int_reg  |  16|   0|   16|          0|
+    |crystals_117_read_int_reg  |  16|   0|   16|          0|
+    |crystals_118_read_int_reg  |  16|   0|   16|          0|
+    |crystals_119_read_int_reg  |  16|   0|   16|          0|
+    |crystals_11_read_int_reg   |  16|   0|   16|          0|
+    |crystals_120_read_int_reg  |  16|   0|   16|          0|
+    |crystals_121_read_int_reg  |  16|   0|   16|          0|
+    |crystals_122_read_int_reg  |  16|   0|   16|          0|
+    |crystals_123_read_int_reg  |  16|   0|   16|          0|
+    |crystals_124_read_int_reg  |  16|   0|   16|          0|
+    |crystals_125_read_int_reg  |  16|   0|   16|          0|
+    |crystals_126_read_int_reg  |  16|   0|   16|          0|
+    |crystals_127_read_int_reg  |  16|   0|   16|          0|
+    |crystals_128_read_int_reg  |  16|   0|   16|          0|
+    |crystals_129_read_int_reg  |  16|   0|   16|          0|
+    |crystals_12_read_int_reg   |  16|   0|   16|          0|
+    |crystals_130_read_int_reg  |  16|   0|   16|          0|
+    |crystals_131_read_int_reg  |  16|   0|   16|          0|
+    |crystals_132_read_int_reg  |  16|   0|   16|          0|
+    |crystals_133_read_int_reg  |  16|   0|   16|          0|
+    |crystals_134_read_int_reg  |  16|   0|   16|          0|
+    |crystals_135_read_int_reg  |  16|   0|   16|          0|
+    |crystals_136_read_int_reg  |  16|   0|   16|          0|
+    |crystals_137_read_int_reg  |  16|   0|   16|          0|
+    |crystals_138_read_int_reg  |  16|   0|   16|          0|
+    |crystals_139_read_int_reg  |  16|   0|   16|          0|
+    |crystals_13_read_int_reg   |  16|   0|   16|          0|
+    |crystals_140_read_int_reg  |  16|   0|   16|          0|
+    |crystals_141_read_int_reg  |  16|   0|   16|          0|
+    |crystals_142_read_int_reg  |  16|   0|   16|          0|
+    |crystals_143_read_int_reg  |  16|   0|   16|          0|
+    |crystals_144_read_int_reg  |  16|   0|   16|          0|
+    |crystals_145_read_int_reg  |  16|   0|   16|          0|
+    |crystals_146_read_int_reg  |  16|   0|   16|          0|
+    |crystals_147_read_int_reg  |  16|   0|   16|          0|
+    |crystals_148_read_int_reg  |  16|   0|   16|          0|
+    |crystals_149_read_int_reg  |  16|   0|   16|          0|
+    |crystals_14_read_int_reg   |  16|   0|   16|          0|
+    |crystals_150_read_int_reg  |  16|   0|   16|          0|
+    |crystals_151_read_int_reg  |  16|   0|   16|          0|
+    |crystals_152_read_int_reg  |  16|   0|   16|          0|
+    |crystals_153_read_int_reg  |  16|   0|   16|          0|
+    |crystals_154_read_int_reg  |  16|   0|   16|          0|
+    |crystals_155_read_int_reg  |  16|   0|   16|          0|
+    |crystals_156_read_int_reg  |  16|   0|   16|          0|
+    |crystals_157_read_int_reg  |  16|   0|   16|          0|
+    |crystals_158_read_int_reg  |  16|   0|   16|          0|
+    |crystals_159_read_int_reg  |  16|   0|   16|          0|
+    |crystals_15_read_int_reg   |  16|   0|   16|          0|
+    |crystals_160_read_int_reg  |  16|   0|   16|          0|
+    |crystals_161_read_int_reg  |  16|   0|   16|          0|
+    |crystals_162_read_int_reg  |  16|   0|   16|          0|
+    |crystals_163_read_int_reg  |  16|   0|   16|          0|
+    |crystals_164_read_int_reg  |  16|   0|   16|          0|
+    |crystals_165_read_int_reg  |  16|   0|   16|          0|
+    |crystals_166_read_int_reg  |  16|   0|   16|          0|
+    |crystals_167_read_int_reg  |  16|   0|   16|          0|
+    |crystals_168_read_int_reg  |  16|   0|   16|          0|
+    |crystals_169_read_int_reg  |  16|   0|   16|          0|
+    |crystals_16_read_int_reg   |  16|   0|   16|          0|
+    |crystals_170_read_int_reg  |  16|   0|   16|          0|
+    |crystals_171_read_int_reg  |  16|   0|   16|          0|
+    |crystals_172_read_int_reg  |  16|   0|   16|          0|
+    |crystals_173_read_int_reg  |  16|   0|   16|          0|
+    |crystals_174_read_int_reg  |  16|   0|   16|          0|
+    |crystals_175_read_int_reg  |  16|   0|   16|          0|
+    |crystals_176_read_int_reg  |  16|   0|   16|          0|
+    |crystals_177_read_int_reg  |  16|   0|   16|          0|
+    |crystals_178_read_int_reg  |  16|   0|   16|          0|
+    |crystals_179_read_int_reg  |  16|   0|   16|          0|
+    |crystals_17_read_int_reg   |  16|   0|   16|          0|
+    |crystals_180_read_int_reg  |  16|   0|   16|          0|
+    |crystals_181_read_int_reg  |  16|   0|   16|          0|
+    |crystals_182_read_int_reg  |  16|   0|   16|          0|
+    |crystals_183_read_int_reg  |  16|   0|   16|          0|
+    |crystals_184_read_int_reg  |  16|   0|   16|          0|
+    |crystals_185_read_int_reg  |  16|   0|   16|          0|
+    |crystals_186_read_int_reg  |  16|   0|   16|          0|
+    |crystals_187_read_int_reg  |  16|   0|   16|          0|
+    |crystals_188_read_int_reg  |  16|   0|   16|          0|
+    |crystals_189_read_int_reg  |  16|   0|   16|          0|
+    |crystals_18_read_int_reg   |  16|   0|   16|          0|
+    |crystals_190_read_int_reg  |  16|   0|   16|          0|
+    |crystals_191_read_int_reg  |  16|   0|   16|          0|
+    |crystals_192_read_int_reg  |  16|   0|   16|          0|
+    |crystals_193_read_int_reg  |  16|   0|   16|          0|
+    |crystals_194_read_int_reg  |  16|   0|   16|          0|
+    |crystals_195_read_int_reg  |  16|   0|   16|          0|
+    |crystals_196_read_int_reg  |  16|   0|   16|          0|
+    |crystals_197_read_int_reg  |  16|   0|   16|          0|
+    |crystals_198_read_int_reg  |  16|   0|   16|          0|
+    |crystals_199_read_int_reg  |  16|   0|   16|          0|
+    |crystals_19_read_int_reg   |  16|   0|   16|          0|
+    |crystals_1_read_int_reg    |  16|   0|   16|          0|
+    |crystals_200_read_int_reg  |  16|   0|   16|          0|
+    |crystals_201_read_int_reg  |  16|   0|   16|          0|
+    |crystals_202_read_int_reg  |  16|   0|   16|          0|
+    |crystals_203_read_int_reg  |  16|   0|   16|          0|
+    |crystals_204_read_int_reg  |  16|   0|   16|          0|
+    |crystals_205_read_int_reg  |  16|   0|   16|          0|
+    |crystals_206_read_int_reg  |  16|   0|   16|          0|
+    |crystals_207_read_int_reg  |  16|   0|   16|          0|
+    |crystals_208_read_int_reg  |  16|   0|   16|          0|
+    |crystals_209_read_int_reg  |  16|   0|   16|          0|
+    |crystals_20_read_int_reg   |  16|   0|   16|          0|
+    |crystals_210_read_int_reg  |  16|   0|   16|          0|
+    |crystals_211_read_int_reg  |  16|   0|   16|          0|
+    |crystals_212_read_int_reg  |  16|   0|   16|          0|
+    |crystals_213_read_int_reg  |  16|   0|   16|          0|
+    |crystals_214_read_int_reg  |  16|   0|   16|          0|
+    |crystals_215_read_int_reg  |  16|   0|   16|          0|
+    |crystals_216_read_int_reg  |  16|   0|   16|          0|
+    |crystals_217_read_int_reg  |  16|   0|   16|          0|
+    |crystals_218_read_int_reg  |  16|   0|   16|          0|
+    |crystals_219_read_int_reg  |  16|   0|   16|          0|
+    |crystals_21_read_int_reg   |  16|   0|   16|          0|
+    |crystals_220_read_int_reg  |  16|   0|   16|          0|
+    |crystals_221_read_int_reg  |  16|   0|   16|          0|
+    |crystals_222_read_int_reg  |  16|   0|   16|          0|
+    |crystals_223_read_int_reg  |  16|   0|   16|          0|
+    |crystals_224_read_int_reg  |  16|   0|   16|          0|
+    |crystals_225_read_int_reg  |  16|   0|   16|          0|
+    |crystals_226_read_int_reg  |  16|   0|   16|          0|
+    |crystals_227_read_int_reg  |  16|   0|   16|          0|
+    |crystals_228_read_int_reg  |  16|   0|   16|          0|
+    |crystals_229_read_int_reg  |  16|   0|   16|          0|
+    |crystals_22_read_int_reg   |  16|   0|   16|          0|
+    |crystals_230_read_int_reg  |  16|   0|   16|          0|
+    |crystals_231_read_int_reg  |  16|   0|   16|          0|
+    |crystals_232_read_int_reg  |  16|   0|   16|          0|
+    |crystals_233_read_int_reg  |  16|   0|   16|          0|
+    |crystals_234_read_int_reg  |  16|   0|   16|          0|
+    |crystals_235_read_int_reg  |  16|   0|   16|          0|
+    |crystals_236_read_int_reg  |  16|   0|   16|          0|
+    |crystals_237_read_int_reg  |  16|   0|   16|          0|
+    |crystals_238_read_int_reg  |  16|   0|   16|          0|
+    |crystals_239_read_int_reg  |  16|   0|   16|          0|
+    |crystals_23_read_int_reg   |  16|   0|   16|          0|
+    |crystals_240_read_int_reg  |  16|   0|   16|          0|
+    |crystals_241_read_int_reg  |  16|   0|   16|          0|
+    |crystals_242_read_int_reg  |  16|   0|   16|          0|
+    |crystals_243_read_int_reg  |  16|   0|   16|          0|
+    |crystals_244_read_int_reg  |  16|   0|   16|          0|
+    |crystals_245_read_int_reg  |  16|   0|   16|          0|
+    |crystals_246_read_int_reg  |  16|   0|   16|          0|
+    |crystals_247_read_int_reg  |  16|   0|   16|          0|
+    |crystals_248_read_int_reg  |  16|   0|   16|          0|
+    |crystals_249_read_int_reg  |  16|   0|   16|          0|
+    |crystals_24_read_int_reg   |  16|   0|   16|          0|
+    |crystals_250_read_int_reg  |  16|   0|   16|          0|
+    |crystals_251_read_int_reg  |  16|   0|   16|          0|
+    |crystals_252_read_int_reg  |  16|   0|   16|          0|
+    |crystals_253_read_int_reg  |  16|   0|   16|          0|
+    |crystals_254_read_int_reg  |  16|   0|   16|          0|
+    |crystals_255_read_int_reg  |  16|   0|   16|          0|
+    |crystals_256_read_int_reg  |  16|   0|   16|          0|
+    |crystals_257_read_int_reg  |  16|   0|   16|          0|
+    |crystals_258_read_int_reg  |  16|   0|   16|          0|
+    |crystals_259_read_int_reg  |  16|   0|   16|          0|
+    |crystals_25_read_int_reg   |  16|   0|   16|          0|
+    |crystals_260_read_int_reg  |  16|   0|   16|          0|
+    |crystals_261_read_int_reg  |  16|   0|   16|          0|
+    |crystals_262_read_int_reg  |  16|   0|   16|          0|
+    |crystals_263_read_int_reg  |  16|   0|   16|          0|
+    |crystals_264_read_int_reg  |  16|   0|   16|          0|
+    |crystals_265_read_int_reg  |  16|   0|   16|          0|
+    |crystals_266_read_int_reg  |  16|   0|   16|          0|
+    |crystals_267_read_int_reg  |  16|   0|   16|          0|
+    |crystals_268_read_int_reg  |  16|   0|   16|          0|
+    |crystals_269_read_int_reg  |  16|   0|   16|          0|
+    |crystals_26_read_int_reg   |  16|   0|   16|          0|
+    |crystals_270_read_int_reg  |  16|   0|   16|          0|
+    |crystals_271_read_int_reg  |  16|   0|   16|          0|
+    |crystals_272_read_int_reg  |  16|   0|   16|          0|
+    |crystals_273_read_int_reg  |  16|   0|   16|          0|
+    |crystals_274_read_int_reg  |  16|   0|   16|          0|
+    |crystals_275_read_int_reg  |  16|   0|   16|          0|
+    |crystals_276_read_int_reg  |  16|   0|   16|          0|
+    |crystals_277_read_int_reg  |  16|   0|   16|          0|
+    |crystals_278_read_int_reg  |  16|   0|   16|          0|
+    |crystals_279_read_int_reg  |  16|   0|   16|          0|
+    |crystals_27_read_int_reg   |  16|   0|   16|          0|
+    |crystals_280_read_int_reg  |  16|   0|   16|          0|
+    |crystals_281_read_int_reg  |  16|   0|   16|          0|
+    |crystals_282_read_int_reg  |  16|   0|   16|          0|
+    |crystals_283_read_int_reg  |  16|   0|   16|          0|
+    |crystals_284_read_int_reg  |  16|   0|   16|          0|
+    |crystals_285_read_int_reg  |  16|   0|   16|          0|
+    |crystals_286_read_int_reg  |  16|   0|   16|          0|
+    |crystals_287_read_int_reg  |  16|   0|   16|          0|
+    |crystals_288_read_int_reg  |  16|   0|   16|          0|
+    |crystals_289_read_int_reg  |  16|   0|   16|          0|
+    |crystals_28_read_int_reg   |  16|   0|   16|          0|
+    |crystals_290_read_int_reg  |  16|   0|   16|          0|
+    |crystals_291_read_int_reg  |  16|   0|   16|          0|
+    |crystals_292_read_int_reg  |  16|   0|   16|          0|
+    |crystals_293_read_int_reg  |  16|   0|   16|          0|
+    |crystals_294_read_int_reg  |  16|   0|   16|          0|
+    |crystals_295_read_int_reg  |  16|   0|   16|          0|
+    |crystals_296_read_int_reg  |  16|   0|   16|          0|
+    |crystals_297_read_int_reg  |  16|   0|   16|          0|
+    |crystals_298_read_int_reg  |  16|   0|   16|          0|
+    |crystals_299_read_int_reg  |  16|   0|   16|          0|
+    |crystals_29_read_int_reg   |  16|   0|   16|          0|
+    |crystals_2_read_int_reg    |  16|   0|   16|          0|
+    |crystals_30_read_int_reg   |  16|   0|   16|          0|
+    |crystals_31_read_int_reg   |  16|   0|   16|          0|
+    |crystals_32_read_int_reg   |  16|   0|   16|          0|
+    |crystals_33_read_int_reg   |  16|   0|   16|          0|
+    |crystals_34_read_int_reg   |  16|   0|   16|          0|
+    |crystals_35_read_int_reg   |  16|   0|   16|          0|
+    |crystals_36_read_int_reg   |  16|   0|   16|          0|
+    |crystals_37_read_int_reg   |  16|   0|   16|          0|
+    |crystals_38_read_int_reg   |  16|   0|   16|          0|
+    |crystals_39_read_int_reg   |  16|   0|   16|          0|
+    |crystals_3_read_int_reg    |  16|   0|   16|          0|
+    |crystals_40_read_int_reg   |  16|   0|   16|          0|
+    |crystals_41_read_int_reg   |  16|   0|   16|          0|
+    |crystals_42_read_int_reg   |  16|   0|   16|          0|
+    |crystals_43_read_int_reg   |  16|   0|   16|          0|
+    |crystals_44_read_int_reg   |  16|   0|   16|          0|
+    |crystals_45_read_int_reg   |  16|   0|   16|          0|
+    |crystals_46_read_int_reg   |  16|   0|   16|          0|
+    |crystals_47_read_int_reg   |  16|   0|   16|          0|
+    |crystals_48_read_int_reg   |  16|   0|   16|          0|
+    |crystals_49_read_int_reg   |  16|   0|   16|          0|
+    |crystals_4_read_int_reg    |  16|   0|   16|          0|
+    |crystals_50_read_int_reg   |  16|   0|   16|          0|
+    |crystals_51_read_int_reg   |  16|   0|   16|          0|
+    |crystals_52_read_int_reg   |  16|   0|   16|          0|
+    |crystals_53_read_int_reg   |  16|   0|   16|          0|
+    |crystals_54_read_int_reg   |  16|   0|   16|          0|
+    |crystals_55_read_int_reg   |  16|   0|   16|          0|
+    |crystals_56_read_int_reg   |  16|   0|   16|          0|
+    |crystals_57_read_int_reg   |  16|   0|   16|          0|
+    |crystals_58_read_int_reg   |  16|   0|   16|          0|
+    |crystals_59_read_int_reg   |  16|   0|   16|          0|
+    |crystals_5_read_int_reg    |  16|   0|   16|          0|
+    |crystals_60_read_int_reg   |  16|   0|   16|          0|
+    |crystals_61_read_int_reg   |  16|   0|   16|          0|
+    |crystals_62_read_int_reg   |  16|   0|   16|          0|
+    |crystals_63_read_int_reg   |  16|   0|   16|          0|
+    |crystals_64_read_int_reg   |  16|   0|   16|          0|
+    |crystals_65_read_int_reg   |  16|   0|   16|          0|
+    |crystals_66_read_int_reg   |  16|   0|   16|          0|
+    |crystals_67_read_int_reg   |  16|   0|   16|          0|
+    |crystals_68_read_int_reg   |  16|   0|   16|          0|
+    |crystals_69_read_int_reg   |  16|   0|   16|          0|
+    |crystals_6_read_int_reg    |  16|   0|   16|          0|
+    |crystals_70_read_int_reg   |  16|   0|   16|          0|
+    |crystals_71_read_int_reg   |  16|   0|   16|          0|
+    |crystals_72_read_int_reg   |  16|   0|   16|          0|
+    |crystals_73_read_int_reg   |  16|   0|   16|          0|
+    |crystals_74_read_int_reg   |  16|   0|   16|          0|
+    |crystals_75_read_int_reg   |  16|   0|   16|          0|
+    |crystals_76_read_int_reg   |  16|   0|   16|          0|
+    |crystals_77_read_int_reg   |  16|   0|   16|          0|
+    |crystals_78_read_int_reg   |  16|   0|   16|          0|
+    |crystals_79_read_int_reg   |  16|   0|   16|          0|
+    |crystals_7_read_int_reg    |  16|   0|   16|          0|
+    |crystals_80_read_int_reg   |  16|   0|   16|          0|
+    |crystals_81_read_int_reg   |  16|   0|   16|          0|
+    |crystals_82_read_int_reg   |  16|   0|   16|          0|
+    |crystals_83_read_int_reg   |  16|   0|   16|          0|
+    |crystals_84_read_int_reg   |  16|   0|   16|          0|
+    |crystals_85_read_int_reg   |  16|   0|   16|          0|
+    |crystals_86_read_int_reg   |  16|   0|   16|          0|
+    |crystals_87_read_int_reg   |  16|   0|   16|          0|
+    |crystals_88_read_int_reg   |  16|   0|   16|          0|
+    |crystals_89_read_int_reg   |  16|   0|   16|          0|
+    |crystals_8_read_int_reg    |  16|   0|   16|          0|
+    |crystals_90_read_int_reg   |  16|   0|   16|          0|
+    |crystals_91_read_int_reg   |  16|   0|   16|          0|
+    |crystals_92_read_int_reg   |  16|   0|   16|          0|
+    |crystals_93_read_int_reg   |  16|   0|   16|          0|
+    |crystals_94_read_int_reg   |  16|   0|   16|          0|
+    |crystals_95_read_int_reg   |  16|   0|   16|          0|
+    |crystals_96_read_int_reg   |  16|   0|   16|          0|
+    |crystals_97_read_int_reg   |  16|   0|   16|          0|
+    |crystals_98_read_int_reg   |  16|   0|   16|          0|
+    |crystals_99_read_int_reg   |  16|   0|   16|          0|
+    |crystals_9_read_int_reg    |  16|   0|   16|          0|
+    +---------------------------+----+----+-----+-----------+
+    |Total                      |4801|   0| 4801|          0|
+    +---------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+----+-----+------------+-------------------+--------------+
+|     RTL Ports     | Dir| Bits|  Protocol  |   Source Object   |    C Type    |
++-------------------+----+-----+------------+-------------------+--------------+
+|ap_clk             | in |    1| ap_ctrl_hs | getClustersInCard | return value |
+|ap_rst             | in |    1| ap_ctrl_hs | getClustersInCard | return value |
+|ap_ce              | in |    1| ap_ctrl_hs | getClustersInCard | return value |
+|crystals_0_read    | in |   16|   ap_none  |  crystals_0_read  |    scalar    |
+|crystals_1_read    | in |   16|   ap_none  |  crystals_1_read  |    scalar    |
+|crystals_2_read    | in |   16|   ap_none  |  crystals_2_read  |    scalar    |
+|crystals_3_read    | in |   16|   ap_none  |  crystals_3_read  |    scalar    |
+|crystals_4_read    | in |   16|   ap_none  |  crystals_4_read  |    scalar    |
+|crystals_5_read    | in |   16|   ap_none  |  crystals_5_read  |    scalar    |
+|crystals_6_read    | in |   16|   ap_none  |  crystals_6_read  |    scalar    |
+|crystals_7_read    | in |   16|   ap_none  |  crystals_7_read  |    scalar    |
+|crystals_8_read    | in |   16|   ap_none  |  crystals_8_read  |    scalar    |
+|crystals_9_read    | in |   16|   ap_none  |  crystals_9_read  |    scalar    |
+|crystals_10_read   | in |   16|   ap_none  |  crystals_10_read |    scalar    |
+|crystals_11_read   | in |   16|   ap_none  |  crystals_11_read |    scalar    |
+|crystals_12_read   | in |   16|   ap_none  |  crystals_12_read |    scalar    |
+|crystals_13_read   | in |   16|   ap_none  |  crystals_13_read |    scalar    |
+|crystals_14_read   | in |   16|   ap_none  |  crystals_14_read |    scalar    |
+|crystals_15_read   | in |   16|   ap_none  |  crystals_15_read |    scalar    |
+|crystals_16_read   | in |   16|   ap_none  |  crystals_16_read |    scalar    |
+|crystals_17_read   | in |   16|   ap_none  |  crystals_17_read |    scalar    |
+|crystals_18_read   | in |   16|   ap_none  |  crystals_18_read |    scalar    |
+|crystals_19_read   | in |   16|   ap_none  |  crystals_19_read |    scalar    |
+|crystals_20_read   | in |   16|   ap_none  |  crystals_20_read |    scalar    |
+|crystals_21_read   | in |   16|   ap_none  |  crystals_21_read |    scalar    |
+|crystals_22_read   | in |   16|   ap_none  |  crystals_22_read |    scalar    |
+|crystals_23_read   | in |   16|   ap_none  |  crystals_23_read |    scalar    |
+|crystals_24_read   | in |   16|   ap_none  |  crystals_24_read |    scalar    |
+|crystals_25_read   | in |   16|   ap_none  |  crystals_25_read |    scalar    |
+|crystals_26_read   | in |   16|   ap_none  |  crystals_26_read |    scalar    |
+|crystals_27_read   | in |   16|   ap_none  |  crystals_27_read |    scalar    |
+|crystals_28_read   | in |   16|   ap_none  |  crystals_28_read |    scalar    |
+|crystals_29_read   | in |   16|   ap_none  |  crystals_29_read |    scalar    |
+|crystals_30_read   | in |   16|   ap_none  |  crystals_30_read |    scalar    |
+|crystals_31_read   | in |   16|   ap_none  |  crystals_31_read |    scalar    |
+|crystals_32_read   | in |   16|   ap_none  |  crystals_32_read |    scalar    |
+|crystals_33_read   | in |   16|   ap_none  |  crystals_33_read |    scalar    |
+|crystals_34_read   | in |   16|   ap_none  |  crystals_34_read |    scalar    |
+|crystals_35_read   | in |   16|   ap_none  |  crystals_35_read |    scalar    |
+|crystals_36_read   | in |   16|   ap_none  |  crystals_36_read |    scalar    |
+|crystals_37_read   | in |   16|   ap_none  |  crystals_37_read |    scalar    |
+|crystals_38_read   | in |   16|   ap_none  |  crystals_38_read |    scalar    |
+|crystals_39_read   | in |   16|   ap_none  |  crystals_39_read |    scalar    |
+|crystals_40_read   | in |   16|   ap_none  |  crystals_40_read |    scalar    |
+|crystals_41_read   | in |   16|   ap_none  |  crystals_41_read |    scalar    |
+|crystals_42_read   | in |   16|   ap_none  |  crystals_42_read |    scalar    |
+|crystals_43_read   | in |   16|   ap_none  |  crystals_43_read |    scalar    |
+|crystals_44_read   | in |   16|   ap_none  |  crystals_44_read |    scalar    |
+|crystals_45_read   | in |   16|   ap_none  |  crystals_45_read |    scalar    |
+|crystals_46_read   | in |   16|   ap_none  |  crystals_46_read |    scalar    |
+|crystals_47_read   | in |   16|   ap_none  |  crystals_47_read |    scalar    |
+|crystals_48_read   | in |   16|   ap_none  |  crystals_48_read |    scalar    |
+|crystals_49_read   | in |   16|   ap_none  |  crystals_49_read |    scalar    |
+|crystals_50_read   | in |   16|   ap_none  |  crystals_50_read |    scalar    |
+|crystals_51_read   | in |   16|   ap_none  |  crystals_51_read |    scalar    |
+|crystals_52_read   | in |   16|   ap_none  |  crystals_52_read |    scalar    |
+|crystals_53_read   | in |   16|   ap_none  |  crystals_53_read |    scalar    |
+|crystals_54_read   | in |   16|   ap_none  |  crystals_54_read |    scalar    |
+|crystals_55_read   | in |   16|   ap_none  |  crystals_55_read |    scalar    |
+|crystals_56_read   | in |   16|   ap_none  |  crystals_56_read |    scalar    |
+|crystals_57_read   | in |   16|   ap_none  |  crystals_57_read |    scalar    |
+|crystals_58_read   | in |   16|   ap_none  |  crystals_58_read |    scalar    |
+|crystals_59_read   | in |   16|   ap_none  |  crystals_59_read |    scalar    |
+|crystals_60_read   | in |   16|   ap_none  |  crystals_60_read |    scalar    |
+|crystals_61_read   | in |   16|   ap_none  |  crystals_61_read |    scalar    |
+|crystals_62_read   | in |   16|   ap_none  |  crystals_62_read |    scalar    |
+|crystals_63_read   | in |   16|   ap_none  |  crystals_63_read |    scalar    |
+|crystals_64_read   | in |   16|   ap_none  |  crystals_64_read |    scalar    |
+|crystals_65_read   | in |   16|   ap_none  |  crystals_65_read |    scalar    |
+|crystals_66_read   | in |   16|   ap_none  |  crystals_66_read |    scalar    |
+|crystals_67_read   | in |   16|   ap_none  |  crystals_67_read |    scalar    |
+|crystals_68_read   | in |   16|   ap_none  |  crystals_68_read |    scalar    |
+|crystals_69_read   | in |   16|   ap_none  |  crystals_69_read |    scalar    |
+|crystals_70_read   | in |   16|   ap_none  |  crystals_70_read |    scalar    |
+|crystals_71_read   | in |   16|   ap_none  |  crystals_71_read |    scalar    |
+|crystals_72_read   | in |   16|   ap_none  |  crystals_72_read |    scalar    |
+|crystals_73_read   | in |   16|   ap_none  |  crystals_73_read |    scalar    |
+|crystals_74_read   | in |   16|   ap_none  |  crystals_74_read |    scalar    |
+|crystals_75_read   | in |   16|   ap_none  |  crystals_75_read |    scalar    |
+|crystals_76_read   | in |   16|   ap_none  |  crystals_76_read |    scalar    |
+|crystals_77_read   | in |   16|   ap_none  |  crystals_77_read |    scalar    |
+|crystals_78_read   | in |   16|   ap_none  |  crystals_78_read |    scalar    |
+|crystals_79_read   | in |   16|   ap_none  |  crystals_79_read |    scalar    |
+|crystals_80_read   | in |   16|   ap_none  |  crystals_80_read |    scalar    |
+|crystals_81_read   | in |   16|   ap_none  |  crystals_81_read |    scalar    |
+|crystals_82_read   | in |   16|   ap_none  |  crystals_82_read |    scalar    |
+|crystals_83_read   | in |   16|   ap_none  |  crystals_83_read |    scalar    |
+|crystals_84_read   | in |   16|   ap_none  |  crystals_84_read |    scalar    |
+|crystals_85_read   | in |   16|   ap_none  |  crystals_85_read |    scalar    |
+|crystals_86_read   | in |   16|   ap_none  |  crystals_86_read |    scalar    |
+|crystals_87_read   | in |   16|   ap_none  |  crystals_87_read |    scalar    |
+|crystals_88_read   | in |   16|   ap_none  |  crystals_88_read |    scalar    |
+|crystals_89_read   | in |   16|   ap_none  |  crystals_89_read |    scalar    |
+|crystals_90_read   | in |   16|   ap_none  |  crystals_90_read |    scalar    |
+|crystals_91_read   | in |   16|   ap_none  |  crystals_91_read |    scalar    |
+|crystals_92_read   | in |   16|   ap_none  |  crystals_92_read |    scalar    |
+|crystals_93_read   | in |   16|   ap_none  |  crystals_93_read |    scalar    |
+|crystals_94_read   | in |   16|   ap_none  |  crystals_94_read |    scalar    |
+|crystals_95_read   | in |   16|   ap_none  |  crystals_95_read |    scalar    |
+|crystals_96_read   | in |   16|   ap_none  |  crystals_96_read |    scalar    |
+|crystals_97_read   | in |   16|   ap_none  |  crystals_97_read |    scalar    |
+|crystals_98_read   | in |   16|   ap_none  |  crystals_98_read |    scalar    |
+|crystals_99_read   | in |   16|   ap_none  |  crystals_99_read |    scalar    |
+|crystals_100_read  | in |   16|   ap_none  | crystals_100_read |    scalar    |
+|crystals_101_read  | in |   16|   ap_none  | crystals_101_read |    scalar    |
+|crystals_102_read  | in |   16|   ap_none  | crystals_102_read |    scalar    |
+|crystals_103_read  | in |   16|   ap_none  | crystals_103_read |    scalar    |
+|crystals_104_read  | in |   16|   ap_none  | crystals_104_read |    scalar    |
+|crystals_105_read  | in |   16|   ap_none  | crystals_105_read |    scalar    |
+|crystals_106_read  | in |   16|   ap_none  | crystals_106_read |    scalar    |
+|crystals_107_read  | in |   16|   ap_none  | crystals_107_read |    scalar    |
+|crystals_108_read  | in |   16|   ap_none  | crystals_108_read |    scalar    |
+|crystals_109_read  | in |   16|   ap_none  | crystals_109_read |    scalar    |
+|crystals_110_read  | in |   16|   ap_none  | crystals_110_read |    scalar    |
+|crystals_111_read  | in |   16|   ap_none  | crystals_111_read |    scalar    |
+|crystals_112_read  | in |   16|   ap_none  | crystals_112_read |    scalar    |
+|crystals_113_read  | in |   16|   ap_none  | crystals_113_read |    scalar    |
+|crystals_114_read  | in |   16|   ap_none  | crystals_114_read |    scalar    |
+|crystals_115_read  | in |   16|   ap_none  | crystals_115_read |    scalar    |
+|crystals_116_read  | in |   16|   ap_none  | crystals_116_read |    scalar    |
+|crystals_117_read  | in |   16|   ap_none  | crystals_117_read |    scalar    |
+|crystals_118_read  | in |   16|   ap_none  | crystals_118_read |    scalar    |
+|crystals_119_read  | in |   16|   ap_none  | crystals_119_read |    scalar    |
+|crystals_120_read  | in |   16|   ap_none  | crystals_120_read |    scalar    |
+|crystals_121_read  | in |   16|   ap_none  | crystals_121_read |    scalar    |
+|crystals_122_read  | in |   16|   ap_none  | crystals_122_read |    scalar    |
+|crystals_123_read  | in |   16|   ap_none  | crystals_123_read |    scalar    |
+|crystals_124_read  | in |   16|   ap_none  | crystals_124_read |    scalar    |
+|crystals_125_read  | in |   16|   ap_none  | crystals_125_read |    scalar    |
+|crystals_126_read  | in |   16|   ap_none  | crystals_126_read |    scalar    |
+|crystals_127_read  | in |   16|   ap_none  | crystals_127_read |    scalar    |
+|crystals_128_read  | in |   16|   ap_none  | crystals_128_read |    scalar    |
+|crystals_129_read  | in |   16|   ap_none  | crystals_129_read |    scalar    |
+|crystals_130_read  | in |   16|   ap_none  | crystals_130_read |    scalar    |
+|crystals_131_read  | in |   16|   ap_none  | crystals_131_read |    scalar    |
+|crystals_132_read  | in |   16|   ap_none  | crystals_132_read |    scalar    |
+|crystals_133_read  | in |   16|   ap_none  | crystals_133_read |    scalar    |
+|crystals_134_read  | in |   16|   ap_none  | crystals_134_read |    scalar    |
+|crystals_135_read  | in |   16|   ap_none  | crystals_135_read |    scalar    |
+|crystals_136_read  | in |   16|   ap_none  | crystals_136_read |    scalar    |
+|crystals_137_read  | in |   16|   ap_none  | crystals_137_read |    scalar    |
+|crystals_138_read  | in |   16|   ap_none  | crystals_138_read |    scalar    |
+|crystals_139_read  | in |   16|   ap_none  | crystals_139_read |    scalar    |
+|crystals_140_read  | in |   16|   ap_none  | crystals_140_read |    scalar    |
+|crystals_141_read  | in |   16|   ap_none  | crystals_141_read |    scalar    |
+|crystals_142_read  | in |   16|   ap_none  | crystals_142_read |    scalar    |
+|crystals_143_read  | in |   16|   ap_none  | crystals_143_read |    scalar    |
+|crystals_144_read  | in |   16|   ap_none  | crystals_144_read |    scalar    |
+|crystals_145_read  | in |   16|   ap_none  | crystals_145_read |    scalar    |
+|crystals_146_read  | in |   16|   ap_none  | crystals_146_read |    scalar    |
+|crystals_147_read  | in |   16|   ap_none  | crystals_147_read |    scalar    |
+|crystals_148_read  | in |   16|   ap_none  | crystals_148_read |    scalar    |
+|crystals_149_read  | in |   16|   ap_none  | crystals_149_read |    scalar    |
+|crystals_150_read  | in |   16|   ap_none  | crystals_150_read |    scalar    |
+|crystals_151_read  | in |   16|   ap_none  | crystals_151_read |    scalar    |
+|crystals_152_read  | in |   16|   ap_none  | crystals_152_read |    scalar    |
+|crystals_153_read  | in |   16|   ap_none  | crystals_153_read |    scalar    |
+|crystals_154_read  | in |   16|   ap_none  | crystals_154_read |    scalar    |
+|crystals_155_read  | in |   16|   ap_none  | crystals_155_read |    scalar    |
+|crystals_156_read  | in |   16|   ap_none  | crystals_156_read |    scalar    |
+|crystals_157_read  | in |   16|   ap_none  | crystals_157_read |    scalar    |
+|crystals_158_read  | in |   16|   ap_none  | crystals_158_read |    scalar    |
+|crystals_159_read  | in |   16|   ap_none  | crystals_159_read |    scalar    |
+|crystals_160_read  | in |   16|   ap_none  | crystals_160_read |    scalar    |
+|crystals_161_read  | in |   16|   ap_none  | crystals_161_read |    scalar    |
+|crystals_162_read  | in |   16|   ap_none  | crystals_162_read |    scalar    |
+|crystals_163_read  | in |   16|   ap_none  | crystals_163_read |    scalar    |
+|crystals_164_read  | in |   16|   ap_none  | crystals_164_read |    scalar    |
+|crystals_165_read  | in |   16|   ap_none  | crystals_165_read |    scalar    |
+|crystals_166_read  | in |   16|   ap_none  | crystals_166_read |    scalar    |
+|crystals_167_read  | in |   16|   ap_none  | crystals_167_read |    scalar    |
+|crystals_168_read  | in |   16|   ap_none  | crystals_168_read |    scalar    |
+|crystals_169_read  | in |   16|   ap_none  | crystals_169_read |    scalar    |
+|crystals_170_read  | in |   16|   ap_none  | crystals_170_read |    scalar    |
+|crystals_171_read  | in |   16|   ap_none  | crystals_171_read |    scalar    |
+|crystals_172_read  | in |   16|   ap_none  | crystals_172_read |    scalar    |
+|crystals_173_read  | in |   16|   ap_none  | crystals_173_read |    scalar    |
+|crystals_174_read  | in |   16|   ap_none  | crystals_174_read |    scalar    |
+|crystals_175_read  | in |   16|   ap_none  | crystals_175_read |    scalar    |
+|crystals_176_read  | in |   16|   ap_none  | crystals_176_read |    scalar    |
+|crystals_177_read  | in |   16|   ap_none  | crystals_177_read |    scalar    |
+|crystals_178_read  | in |   16|   ap_none  | crystals_178_read |    scalar    |
+|crystals_179_read  | in |   16|   ap_none  | crystals_179_read |    scalar    |
+|crystals_180_read  | in |   16|   ap_none  | crystals_180_read |    scalar    |
+|crystals_181_read  | in |   16|   ap_none  | crystals_181_read |    scalar    |
+|crystals_182_read  | in |   16|   ap_none  | crystals_182_read |    scalar    |
+|crystals_183_read  | in |   16|   ap_none  | crystals_183_read |    scalar    |
+|crystals_184_read  | in |   16|   ap_none  | crystals_184_read |    scalar    |
+|crystals_185_read  | in |   16|   ap_none  | crystals_185_read |    scalar    |
+|crystals_186_read  | in |   16|   ap_none  | crystals_186_read |    scalar    |
+|crystals_187_read  | in |   16|   ap_none  | crystals_187_read |    scalar    |
+|crystals_188_read  | in |   16|   ap_none  | crystals_188_read |    scalar    |
+|crystals_189_read  | in |   16|   ap_none  | crystals_189_read |    scalar    |
+|crystals_190_read  | in |   16|   ap_none  | crystals_190_read |    scalar    |
+|crystals_191_read  | in |   16|   ap_none  | crystals_191_read |    scalar    |
+|crystals_192_read  | in |   16|   ap_none  | crystals_192_read |    scalar    |
+|crystals_193_read  | in |   16|   ap_none  | crystals_193_read |    scalar    |
+|crystals_194_read  | in |   16|   ap_none  | crystals_194_read |    scalar    |
+|crystals_195_read  | in |   16|   ap_none  | crystals_195_read |    scalar    |
+|crystals_196_read  | in |   16|   ap_none  | crystals_196_read |    scalar    |
+|crystals_197_read  | in |   16|   ap_none  | crystals_197_read |    scalar    |
+|crystals_198_read  | in |   16|   ap_none  | crystals_198_read |    scalar    |
+|crystals_199_read  | in |   16|   ap_none  | crystals_199_read |    scalar    |
+|crystals_200_read  | in |   16|   ap_none  | crystals_200_read |    scalar    |
+|crystals_201_read  | in |   16|   ap_none  | crystals_201_read |    scalar    |
+|crystals_202_read  | in |   16|   ap_none  | crystals_202_read |    scalar    |
+|crystals_203_read  | in |   16|   ap_none  | crystals_203_read |    scalar    |
+|crystals_204_read  | in |   16|   ap_none  | crystals_204_read |    scalar    |
+|crystals_205_read  | in |   16|   ap_none  | crystals_205_read |    scalar    |
+|crystals_206_read  | in |   16|   ap_none  | crystals_206_read |    scalar    |
+|crystals_207_read  | in |   16|   ap_none  | crystals_207_read |    scalar    |
+|crystals_208_read  | in |   16|   ap_none  | crystals_208_read |    scalar    |
+|crystals_209_read  | in |   16|   ap_none  | crystals_209_read |    scalar    |
+|crystals_210_read  | in |   16|   ap_none  | crystals_210_read |    scalar    |
+|crystals_211_read  | in |   16|   ap_none  | crystals_211_read |    scalar    |
+|crystals_212_read  | in |   16|   ap_none  | crystals_212_read |    scalar    |
+|crystals_213_read  | in |   16|   ap_none  | crystals_213_read |    scalar    |
+|crystals_214_read  | in |   16|   ap_none  | crystals_214_read |    scalar    |
+|crystals_215_read  | in |   16|   ap_none  | crystals_215_read |    scalar    |
+|crystals_216_read  | in |   16|   ap_none  | crystals_216_read |    scalar    |
+|crystals_217_read  | in |   16|   ap_none  | crystals_217_read |    scalar    |
+|crystals_218_read  | in |   16|   ap_none  | crystals_218_read |    scalar    |
+|crystals_219_read  | in |   16|   ap_none  | crystals_219_read |    scalar    |
+|crystals_220_read  | in |   16|   ap_none  | crystals_220_read |    scalar    |
+|crystals_221_read  | in |   16|   ap_none  | crystals_221_read |    scalar    |
+|crystals_222_read  | in |   16|   ap_none  | crystals_222_read |    scalar    |
+|crystals_223_read  | in |   16|   ap_none  | crystals_223_read |    scalar    |
+|crystals_224_read  | in |   16|   ap_none  | crystals_224_read |    scalar    |
+|crystals_225_read  | in |   16|   ap_none  | crystals_225_read |    scalar    |
+|crystals_226_read  | in |   16|   ap_none  | crystals_226_read |    scalar    |
+|crystals_227_read  | in |   16|   ap_none  | crystals_227_read |    scalar    |
+|crystals_228_read  | in |   16|   ap_none  | crystals_228_read |    scalar    |
+|crystals_229_read  | in |   16|   ap_none  | crystals_229_read |    scalar    |
+|crystals_230_read  | in |   16|   ap_none  | crystals_230_read |    scalar    |
+|crystals_231_read  | in |   16|   ap_none  | crystals_231_read |    scalar    |
+|crystals_232_read  | in |   16|   ap_none  | crystals_232_read |    scalar    |
+|crystals_233_read  | in |   16|   ap_none  | crystals_233_read |    scalar    |
+|crystals_234_read  | in |   16|   ap_none  | crystals_234_read |    scalar    |
+|crystals_235_read  | in |   16|   ap_none  | crystals_235_read |    scalar    |
+|crystals_236_read  | in |   16|   ap_none  | crystals_236_read |    scalar    |
+|crystals_237_read  | in |   16|   ap_none  | crystals_237_read |    scalar    |
+|crystals_238_read  | in |   16|   ap_none  | crystals_238_read |    scalar    |
+|crystals_239_read  | in |   16|   ap_none  | crystals_239_read |    scalar    |
+|crystals_240_read  | in |   16|   ap_none  | crystals_240_read |    scalar    |
+|crystals_241_read  | in |   16|   ap_none  | crystals_241_read |    scalar    |
+|crystals_242_read  | in |   16|   ap_none  | crystals_242_read |    scalar    |
+|crystals_243_read  | in |   16|   ap_none  | crystals_243_read |    scalar    |
+|crystals_244_read  | in |   16|   ap_none  | crystals_244_read |    scalar    |
+|crystals_245_read  | in |   16|   ap_none  | crystals_245_read |    scalar    |
+|crystals_246_read  | in |   16|   ap_none  | crystals_246_read |    scalar    |
+|crystals_247_read  | in |   16|   ap_none  | crystals_247_read |    scalar    |
+|crystals_248_read  | in |   16|   ap_none  | crystals_248_read |    scalar    |
+|crystals_249_read  | in |   16|   ap_none  | crystals_249_read |    scalar    |
+|crystals_250_read  | in |   16|   ap_none  | crystals_250_read |    scalar    |
+|crystals_251_read  | in |   16|   ap_none  | crystals_251_read |    scalar    |
+|crystals_252_read  | in |   16|   ap_none  | crystals_252_read |    scalar    |
+|crystals_253_read  | in |   16|   ap_none  | crystals_253_read |    scalar    |
+|crystals_254_read  | in |   16|   ap_none  | crystals_254_read |    scalar    |
+|crystals_255_read  | in |   16|   ap_none  | crystals_255_read |    scalar    |
+|crystals_256_read  | in |   16|   ap_none  | crystals_256_read |    scalar    |
+|crystals_257_read  | in |   16|   ap_none  | crystals_257_read |    scalar    |
+|crystals_258_read  | in |   16|   ap_none  | crystals_258_read |    scalar    |
+|crystals_259_read  | in |   16|   ap_none  | crystals_259_read |    scalar    |
+|crystals_260_read  | in |   16|   ap_none  | crystals_260_read |    scalar    |
+|crystals_261_read  | in |   16|   ap_none  | crystals_261_read |    scalar    |
+|crystals_262_read  | in |   16|   ap_none  | crystals_262_read |    scalar    |
+|crystals_263_read  | in |   16|   ap_none  | crystals_263_read |    scalar    |
+|crystals_264_read  | in |   16|   ap_none  | crystals_264_read |    scalar    |
+|crystals_265_read  | in |   16|   ap_none  | crystals_265_read |    scalar    |
+|crystals_266_read  | in |   16|   ap_none  | crystals_266_read |    scalar    |
+|crystals_267_read  | in |   16|   ap_none  | crystals_267_read |    scalar    |
+|crystals_268_read  | in |   16|   ap_none  | crystals_268_read |    scalar    |
+|crystals_269_read  | in |   16|   ap_none  | crystals_269_read |    scalar    |
+|crystals_270_read  | in |   16|   ap_none  | crystals_270_read |    scalar    |
+|crystals_271_read  | in |   16|   ap_none  | crystals_271_read |    scalar    |
+|crystals_272_read  | in |   16|   ap_none  | crystals_272_read |    scalar    |
+|crystals_273_read  | in |   16|   ap_none  | crystals_273_read |    scalar    |
+|crystals_274_read  | in |   16|   ap_none  | crystals_274_read |    scalar    |
+|crystals_275_read  | in |   16|   ap_none  | crystals_275_read |    scalar    |
+|crystals_276_read  | in |   16|   ap_none  | crystals_276_read |    scalar    |
+|crystals_277_read  | in |   16|   ap_none  | crystals_277_read |    scalar    |
+|crystals_278_read  | in |   16|   ap_none  | crystals_278_read |    scalar    |
+|crystals_279_read  | in |   16|   ap_none  | crystals_279_read |    scalar    |
+|crystals_280_read  | in |   16|   ap_none  | crystals_280_read |    scalar    |
+|crystals_281_read  | in |   16|   ap_none  | crystals_281_read |    scalar    |
+|crystals_282_read  | in |   16|   ap_none  | crystals_282_read |    scalar    |
+|crystals_283_read  | in |   16|   ap_none  | crystals_283_read |    scalar    |
+|crystals_284_read  | in |   16|   ap_none  | crystals_284_read |    scalar    |
+|crystals_285_read  | in |   16|   ap_none  | crystals_285_read |    scalar    |
+|crystals_286_read  | in |   16|   ap_none  | crystals_286_read |    scalar    |
+|crystals_287_read  | in |   16|   ap_none  | crystals_287_read |    scalar    |
+|crystals_288_read  | in |   16|   ap_none  | crystals_288_read |    scalar    |
+|crystals_289_read  | in |   16|   ap_none  | crystals_289_read |    scalar    |
+|crystals_290_read  | in |   16|   ap_none  | crystals_290_read |    scalar    |
+|crystals_291_read  | in |   16|   ap_none  | crystals_291_read |    scalar    |
+|crystals_292_read  | in |   16|   ap_none  | crystals_292_read |    scalar    |
+|crystals_293_read  | in |   16|   ap_none  | crystals_293_read |    scalar    |
+|crystals_294_read  | in |   16|   ap_none  | crystals_294_read |    scalar    |
+|crystals_295_read  | in |   16|   ap_none  | crystals_295_read |    scalar    |
+|crystals_296_read  | in |   16|   ap_none  | crystals_296_read |    scalar    |
+|crystals_297_read  | in |   16|   ap_none  | crystals_297_read |    scalar    |
+|crystals_298_read  | in |   16|   ap_none  | crystals_298_read |    scalar    |
+|crystals_299_read  | in |   16|   ap_none  | crystals_299_read |    scalar    |
++-------------------+----+-----+------------+-------------------+--------------+
+

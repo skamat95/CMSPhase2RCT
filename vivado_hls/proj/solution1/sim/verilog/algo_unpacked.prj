@@ -1,0 +1,9 @@
+sv work "glbl.v"
+sv xil_defaultlib "getPeakBinOf5.v"
+sv xil_defaultlib "algo_unpacked.autotb.v"
+sv xil_defaultlib "algo_unpacked_muxbkb.v"
+sv xil_defaultlib "getClustersInCard.v"
+sv xil_defaultlib "getClustersin3x4Regi.v"
+sv xil_defaultlib "getClustersInTower.v"
+sv xil_defaultlib "algo_unpacked.v"
+
