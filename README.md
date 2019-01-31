@@ -1,5 +1,4 @@
 # CMSPhase2RCT
-# CMSPhase2GCT
 
 This project uses APxL1TAlgoDev from Ales Svetek (https://github.com/APxL1TAlgoDev)
 
